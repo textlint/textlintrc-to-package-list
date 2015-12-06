@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/textlint/textlintrc-to-pacakge-list/issues"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "listing package name from .textlintrc",
   "main": "lib/textlintrc-to-pacakge-list.js",
   "jsnext:main": "src/textlintrc-to-pacakge-list.js",
