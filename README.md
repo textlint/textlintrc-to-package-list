@@ -1,10 +1,12 @@
-# textlintrc-to-pacakge-list
+# textlintrc-to-pacakge-list [![Build Status](https://travis-ci.org/textlint/textlintrc-to-pacakge-list.svg?branch=master)](https://travis-ci.org/textlint/textlintrc-to-pacakge-list)
 
-listing package name from `.textlintrc`
+Listing package name from `.textlintrc`
+
+Main use case is installing npm package from `.textlinrc`
 
 ## Installation
 
-    npm install textlintrc-to-pacakge-list
+    npm install textlintrc-to-pacakge-list -g
 
 ## Usage
 
