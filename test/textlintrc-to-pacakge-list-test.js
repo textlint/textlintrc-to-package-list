@@ -9,6 +9,7 @@ describe("textlintrc-to-pacakge-list", function () {
         var names = listPackageNames(config);
         assert.deepEqual(names, [
             "textlint-plugin-jtf-style",
+            "textlint-filter-rule-comments",
             "textlint-rule-max-ten",
             "textlint-rule-no-doubled-joshi",
             "textlint-rule-sentence-length",
