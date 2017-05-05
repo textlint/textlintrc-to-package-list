@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "textlint-plugin-jtf-style"
+  ],
+  "filters": {
+    "textlint-filter-rule-comments": true
+  },
+  "rules": {
+    "textlint-rule-max-ten": {
+      "max": 3
+    },
+    "textlint-rule-jtf-style/2.1.5.カタカナ": false
+  }
+}
