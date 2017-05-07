@@ -1,5 +1,7 @@
 # textlintrc-to-pacakge-list [![Build Status](https://travis-ci.org/textlint/textlintrc-to-pacakge-list.svg?branch=master)](https://travis-ci.org/textlint/textlintrc-to-pacakge-list)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/textlint/textlintrc-to-pacakge-list.svg)](https://greenkeeper.io/)
+
 Listing package name from `.textlintrc`
 
 Main use case is installing npm package from `.textlinrc`
