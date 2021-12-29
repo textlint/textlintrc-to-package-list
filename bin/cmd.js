@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { listPackageNames } = require('../');
+const { listPackageNames } = require('../lib/textlintrc-to-pacakge-list.js');
 const concat = require('concat-stream');
 const stripJsonComments = require("strip-json-comments");
 
