@@ -6,7 +6,8 @@ function validRulePackageKey(key) {
     if (key.charAt(0) === "@") {
         return key.split("/").length === 2;
     }
-    // invalid rule/path
+    // invalid rule/key
+    // just ignore
     return key.split("/").length === 1;
 }
 
@@ -33,7 +34,7 @@ export const createFullPackageName = (prefix, name) => {
              * the path is already @scope/<name> or @scope/textlint-rule-<name>
              */
             return name.replace(/^@([^/]+)\/(.*)$/, (all, scope, name) => {
-                // already has prefix
+                // already has prefixed
                 if (name.startsWith(prefix)) {
                     return `@${scope}/${name}`
                 }
@@ -41,7 +42,7 @@ export const createFullPackageName = (prefix, name) => {
             });
         }
     }
-    // already has prefix
+    // already has prefixed - do not add prefix
     if (name.startsWith(prefix)) {
         return `${name}`
     }
