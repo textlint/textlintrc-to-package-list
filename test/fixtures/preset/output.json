@@ -1,0 +1,5 @@
+[
+    "@textlint/textlint-filter-rule-example-filter",
+    "@textlint/textlint-rule-example-rule",
+    "@textlint-ja/textlint-rule-no-synonyms"
+]

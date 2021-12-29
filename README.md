@@ -1,4 +1,4 @@
-# textlintrc-to-pacakge-list [![Build Status](https://travis-ci.org/textlint/textlintrc-to-pacakge-list.svg?branch=master)](https://travis-ci.org/textlint/textlintrc-to-pacakge-list)
+# textlintrc-to-package-list [![Actions Status: test](https://github.com/textlint/textlintrc-to-package-list/workflows/test/badge.svg)](https://github.com/textlint/textlintrc-to-package-list/actions?query=workflow%3A"test")
 
 Listing package name from `.textlintrc`
 
@@ -6,11 +6,11 @@ Main use case is installing npm package from `.textlinrc`
 
 ## Installation
 
-    npm install textlintrc-to-pacakge-list -g
+    npm install textlintrc-to-package-list -g
 
 ## Usage
 
-    $ textlintrc-to-pacakge-list ./path/to/.textlintrc
+    $ textlintrc-to-package-list ./path/to/.textlintrc
 
 ### Exaple
 
@@ -68,7 +68,7 @@ textlint-rule-prh
 Install npm package from `.textlintrc`
 
 ```sh
-textlintrc-to-pacakge-list .textlintrc | xargs npm install -S
+textlintrc-to-package-list .textlintrc | xargs npm install -S
 ```
 
 Do Install all package from `.textlintrc`!

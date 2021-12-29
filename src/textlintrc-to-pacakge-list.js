@@ -1,23 +1,65 @@
 // LICENSE : MIT
 "use strict";
+
 function validRulePackageKey(key) {
-    if (key.indexOf("/") !== -1) {
-        return false;
+    // valid: @scope/name
+    if (key.charAt(0) === "@") {
+        return key.split("/").length === 2;
     }
-    return true;
+    // invalid rule/path
+    return key.split("/").length === 1;
 }
-export default function listPackageName(configJSON) {
+
+export const PackageNamePrefix = {
+    config: "textlint-config-",
+    rule: "textlint-rule-",
+    filterRule: "textlint-filter-rule-",
+    rulePreset: "textlint-rule-preset-",
+    plugin: "textlint-plugin-"
+};
+/**
+ * Create full package name and return
+ * @param {string} prefix
+ * @param {string} name
+ * @returns {string}
+ */
+export const createFullPackageName = (prefix, name) => {
+    if (name.charAt(0) === "@") {
+        const scopedPackageNameRegex = new RegExp(`^${prefix}(-|$)`);
+        // if @scope/<name> -> @scope/<prefix><name>
+        if (!scopedPackageNameRegex.test(name.split("/")[1])) {
+            /*
+             * for scoped packages, insert the textlint-rule after the first / unless
+             * the path is already @scope/<name> or @scope/textlint-rule-<name>
+             */
+            return name.replace(/^@([^/]+)\/(.*)$/, (all, scope, name) => {
+                // already has prefix
+                if (name.startsWith(prefix)) {
+                    return `@${scope}/${name}`
+                }
+                return `@${scope}/${prefix}${name}`;
+            });
+        }
+    }
+    // already has prefix
+    if (name.startsWith(prefix)) {
+        return `${name}`
+    }
+    return `${prefix}${name}`;
+};
+
+export function listPackageNames(configJSON) {
     const plugins = Array.isArray(configJSON["plugins"]) ? configJSON["plugins"] : [];
     const rules = configJSON["rules"] || {};
     const filterRules = configJSON["filters"] || {};
     const pluginsNameList = plugins.map(key => {
-        return `textlint-plugin-${key.replace(/^textlint-plugin-/, "")}`;
+        return createFullPackageName(PackageNamePrefix.plugin, key);
     });
     const ruleNameList = Object.keys(rules).filter(validRulePackageKey).map(key => {
-        return `textlint-rule-${key.replace(/textlint-rule-/, "")}`;
+        return createFullPackageName(PackageNamePrefix.rule, key);
     });
     const filterRuleNameList = Object.keys(filterRules).filter(validRulePackageKey).map(key => {
-        return `textlint-filter-rule-${key.replace(/^textlint-filter-rule-/, "")}`;
+        return createFullPackageName(PackageNamePrefix.filterRule, key);
     });
     return [].concat(pluginsNameList, filterRuleNameList, ruleNameList);
 }

@@ -1,15 +1,12 @@
 {
   "presets": [
-    "es2015"
-  ],
-  "plugins": [
-    "add-module-exports"
-  ],
-  "env": {
-    "development": {
-      "presets": [
-        "power-assert"
-      ]
-    }
-  }
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": 12
+        }
+      }
+    ]
+  ]
 }

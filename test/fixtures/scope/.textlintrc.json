@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "@textlint-ja/textlint-rule-preset-foreign-language-writing": {
+      "@textlint-ja/kana-english-fo-pho": false
+    },
+    "preset-ja-technical-writing": {
+      "max": 120,
+      "no-mix-dearu-desumasu": false
+    }
+  }
+}

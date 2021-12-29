@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "@textlint/markdown": {
+      "extensions": [
+        ".mdx"
+      ]
+    }
+  },
+  "filters": {
+    "@textlint/example-filter": true
+  },
+  "rules": {
+    "@textlint/example-rule": true,
+    "@textlint-ja/textlint-rule-no-synonyms": true
+  }
+}

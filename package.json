@@ -1,22 +1,22 @@
 {
-  "name": "textlintrc-to-pacakge-list",
+  "name": "textlintrc-to-package-list",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/textlint/textlintrc-to-pacakge-list.git"
+    "url": "git+https://github.com/textlint/textlintrc-to-package-list.git"
   },
   "author": "azu",
   "email": "azuciao@gmail.com",
-  "homepage": "https://github.com/textlint/textlintrc-to-pacakge-list",
+  "homepage": "https://github.com/textlint/textlintrc-to-package-list",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/textlint/textlintrc-to-pacakge-list/issues"
+    "url": "https://github.com/textlint/textlintrc-to-package-list/issues"
   },
   "version": "1.2.1",
   "description": "listing package name from .textlintrc",
-  "main": "lib/textlintrc-to-pacakge-list.js",
-  "jsnext:main": "src/textlintrc-to-pacakge-list.js",
+  "main": "lib/textlintrc-to-package-list.js",
+  "jsnext:main": "src/textlintrc-to-package-list.js",
   "bin": {
-    "textlintrc-to-pacakge-list": "bin/cmd.js"
+    "textlintrc-to-package-list": "bin/cmd.js"
   },
   "files": [
     "bin",
@@ -30,25 +30,24 @@
     "build": "NODE_ENV=production babel src --out-dir lib --source-maps",
     "watch": "babel src --out-dir lib --watch --source-maps",
     "prepublish": "npm run --if-present build",
-    "test": "mocha"
+    "test": "mocha",
+    "updateSnapshot": "UPDATE_SNAPSHOT=1 npm test"
   },
   "keywords": [
     "textlint",
     "textlint-config"
   ],
   "devDependencies": {
-    "ava": "^0.7.0",
-    "babel-cli": "^6.3.13",
-    "babel-core": "^6.3.13",
-    "babel-plugin-add-module-exports": "^0.1.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-power-assert": "^1.0.0",
-    "babel-register": "^6.9.0",
-    "mocha": "^2.3.4",
-    "power-assert": "^1.4.1"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "babel-preset-power-assert": "^3.0.0",
+    "mocha": "^9.1.3"
   },
   "dependencies": {
-    "concat-stream": "^1.5.1",
-    "strip-json-comments": "^2.0.1"
+    "concat-stream": "^2.0.0",
+    "strip-json-comments": "^3.1.1"
   }
 }
