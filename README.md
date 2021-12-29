@@ -68,7 +68,14 @@ textlint-rule-prh
 Install npm package from `.textlintrc`
 
 ```sh
-textlintrc-to-package-list .textlintrc | xargs npm install -S
+npm install -g textlintrc-to-package-list
+textlintrc-to-package-list .textlintrc | xargs npm install
+```
+
+or 
+
+```shell
+npx --quiet textlintrc-to-package-list .textlintrc.json | xargs npm install
 ```
 
 Do Install all package from `.textlintrc`!
