@@ -19,33 +19,17 @@ Input `.textlintrc`
 ```json
 {
   "plugins": [
-    "jtf-style"
+    "@textlint/html"
   ],
+  "filters": {
+    "comments": true
+  },
   "rules": {
-    "max-ten": {
-      "max": 3
-    },
-    "no-doubled-joshi": {
-      "min_interval": 1
-    },
+    "@textlint/preset-ja-technical-writing": true,
+    "textlint-rule-no-todo": true,
     "sentence-length": {
       "max": 100
-    },
-    "no-start-duplicated-conjunction": {
-      "interval": 2
-    },
-    "spellcheck-tech-word": true,
-    "no-mix-dearu-desumasu": true,
-    "prh": {
-      "rulePaths": [
-        "test/prh.yml"
-      ]
-    },
-    "jtf-style/2.1.2.漢字": false,
-    "jtf-style/2.1.5.カタカナ": false,
-    "jtf-style/2.1.6.カタカナの長音": false,
-    "jtf-style/4.2.2.疑問符(？)": false,
-    "jtf-style/4.3.1.丸かっこ（）": false
+    }
   }
 }
 ```
@@ -53,14 +37,13 @@ Input `.textlintrc`
 Output
 
 ```
-textlint-plugin-jtf-style
-textlint-rule-max-ten
-textlint-rule-no-doubled-joshi
-textlint-rule-sentence-length
-textlint-rule-no-start-duplicated-conjunction
-textlint-rule-spellcheck-tech-word
-textlint-rule-no-mix-dearu-desumasu
-textlint-rule-prh
+[
+    "@textlint/textlint-plugin-html",
+    "textlint-filter-rule-comments",
+    "@textlint/textlint-rule-preset-ja-technical-writing",
+    "textlint-rule-no-todo",
+    "textlint-rule-sentence-length"
+]
 ```
 
 ## UseCase

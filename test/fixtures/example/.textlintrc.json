@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "@textlint/html"
+  ],
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "@textlint/preset-ja-technical-writing": true,
+    "textlint-rule-no-todo": true,
+    "sentence-length": {
+      "max": 100
+    }
+  }
+}
