@@ -37,13 +37,11 @@ Input `.textlintrc`
 Output
 
 ```
-[
-    "@textlint/textlint-plugin-html",
-    "textlint-filter-rule-comments",
-    "@textlint/textlint-rule-preset-ja-technical-writing",
-    "textlint-rule-no-todo",
-    "textlint-rule-sentence-length"
-]
+@textlint/textlint-plugin-html
+textlint-filter-rule-comments
+@textlint/textlint-rule-preset-ja-technical-writing
+textlint-rule-no-todo
+textlint-rule-sentence-length
 ```
 
 ## UseCase
