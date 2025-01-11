@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { listPackageNames } from "../lib/textlintrc-to-pacakge-list.js";
+import { listPackageNames } from "../src/textlintrc-to-pacakge-list.js";
 import concat from "concat-stream";
 import stripJsonComments from "strip-json-comments";
 import fs from "node:fs";
