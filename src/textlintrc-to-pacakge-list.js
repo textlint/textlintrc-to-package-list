@@ -1,6 +1,4 @@
 // LICENSE : MIT
-"use strict";
-
 function validRulePackageKey(key) {
     // valid: @scope/name
     if (key.charAt(0) === "@") {

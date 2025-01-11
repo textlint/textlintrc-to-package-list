@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const { listPackageNames } = require('../lib/textlintrc-to-pacakge-list.js');
-const concat = require('concat-stream');
-const stripJsonComments = require("strip-json-comments");
+import { listPackageNames } from "../lib/textlintrc-to-pacakge-list.js";
+import concat from "concat-stream";
+import stripJsonComments from "strip-json-comments";
+import fs from "node:fs";
 
-const fs = require('fs');
 const file = process.argv[2];
 const input = file && file !== '-'
     ? fs.createReadStream(process.argv[2])

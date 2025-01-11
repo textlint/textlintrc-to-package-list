@@ -1,12 +1,13 @@
 // LICENSE : MIT
 "use strict";
-import fs from "fs";
-import path from "path";
-import assert from "assert"
-import { listPackageNames } from "../src/textlintrc-to-pacakge-list.js";
+import fs from "node:fs";
+import path from "node:path";
+import assert from "node:assert"
+import { describe, it } from "node:test";
 import stripJsonComments from "strip-json-comments";
+import { listPackageNames } from "../src/textlintrc-to-pacakge-list.js";
 
-const fixturesDir = path.join(__dirname, 'fixtures');
+const fixturesDir = path.join(import.meta.dirname, 'fixtures');
 describe("textlintrc-to-package-list", () => {
     fs.readdirSync(fixturesDir)
         .forEach(caseName => {
@@ -15,7 +16,6 @@ describe("textlintrc-to-package-list", () => {
                 const fixtureDir = path.join(fixturesDir, caseName);
                 const actualFilePath = path.join(fixtureDir, ".textlintrc.json");
                 const actualContent = JSON.parse(stripJsonComments(fs.readFileSync(actualFilePath, "utf-8")));
-                console.log()
                 const actualResults = listPackageNames(actualContent);
                 const expectedFilePath = path.join(fixtureDir, "output.json");
                 // Usage: update snapshots
