@@ -12,7 +12,7 @@
     "url": "https://github.com/textlint/textlintrc-to-package-list/issues"
   },
   "type": "module",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "listing package name from .textlintrc",
   "main": "lib/textlintrc-to-package-list.js",
   "bin": {
@@ -34,8 +34,7 @@
     "textlint",
     "textlint-config"
   ],
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "concat-stream": "^2.0.0",
     "strip-json-comments": "^3.1.1"
