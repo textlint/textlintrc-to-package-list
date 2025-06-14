@@ -14,7 +14,8 @@
   "type": "module",
   "version": "3.0.1",
   "description": "listing package name from .textlintrc",
-  "main": "lib/textlintrc-to-package-list.js",
+  "main": "./src/textlintrc-to-package-list.js",
+  "exports": "./src/textlintrc-to-package-list.js",
   "bin": {
     "textlintrc-to-package-list": "bin/cmd.js"
   },
