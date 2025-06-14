@@ -12,7 +12,7 @@
     "url": "https://github.com/textlint/textlintrc-to-package-list/issues"
   },
   "type": "module",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "listing package name from .textlintrc",
   "main": "./src/textlintrc-to-package-list.js",
   "exports": "./src/textlintrc-to-package-list.js",
