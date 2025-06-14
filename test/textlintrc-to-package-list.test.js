@@ -5,7 +5,7 @@ import path from "node:path";
 import assert from "node:assert"
 import { describe, it } from "node:test";
 import stripJsonComments from "strip-json-comments";
-import { listPackageNames } from "../src/textlintrc-to-pacakge-list.js";
+import { listPackageNames } from "../src/textlintrc-to-package-list.js";
 
 const fixturesDir = path.join(import.meta.dirname, 'fixtures');
 describe("textlintrc-to-package-list", () => {
